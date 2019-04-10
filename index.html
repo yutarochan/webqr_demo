@@ -40,9 +40,10 @@
 <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview'),mirror: false });
       scanner.addListener('scan', function (content) {
-        console.log(content);
-		<!-- $("#_qr_content").html(content); -->
-		document.getElementById("_qr_content").innerHTML = content;
+          console.log(content);
+		  <!-- $("#_qr_content").html(content); -->
+		  document.getElementById("_qr_content").innerHTML = content;
+          alert("QR GET!");
       });
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 1) {
